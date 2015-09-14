@@ -8,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree' 
 Plugin 'scrooloose/syntastic'
@@ -17,6 +16,8 @@ Plugin 'chiel92/vim-autoformat'
 Plugin 'bling/vim-bufferline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'sickill/vim-monokai'
 
 " End of plug-ins
 call vundle#end()
@@ -29,7 +30,7 @@ filetype plugin indent on
 set t_Co=256
 set background=dark
 syntax on
-:silent! colorscheme molokai
+:silent! colorscheme monokai
 set ruler
 set guifont=Bitstream\ Vera\ Sans\ Mono\ 13
 set guioptions-=T 				" Removes top toolbar
@@ -67,7 +68,7 @@ set hlsearch					" highlight serches
 """ Airline
 """""""""""""""""""""""""""""""""""
 let g:airline_theme = 'dark'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 set laststatus=2                " always show the statusline
 set encoding=utf-8              " necessary to show Unicode glyphs
 set noshowmode                  " hide the default mode text (e.g. -- INSERT -- below the statusline)
